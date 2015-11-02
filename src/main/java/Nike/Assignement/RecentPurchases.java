@@ -16,12 +16,17 @@ import org.json.simple.JSONObject;
 
 public class RecentPurchases {
 	
-	String FilePath = "/Users/cydobolctbnem/Documents/Development/Assignement/src/main/resources/";
-
+	static String FilePath = "/Users/cydobolctbnem/Documents/Development/Assignement/src/main/resources/";
+	static String date = "10/10/2015";
+	
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws JsonProcessingException,
 			IOException
 	{
+		//FilePath = args[0];
+		
+		
+		
 		DataGeneratorForShoeWareHouse Data = new DataGeneratorForShoeWareHouse();
 		
 		
@@ -30,7 +35,8 @@ public class RecentPurchases {
 		RecentPurchases rp = new RecentPurchases();
 		 
 		String filePath = rp.FilePath;
-		
+		String text_case_id = "TC-001.";
+		int i = 0;
 		
 		
 		ObjectMapper mapper = new ObjectMapper();
@@ -91,9 +97,25 @@ public class RecentPurchases {
 			       
 			    .writeEnd();
 			    gen.close();
-
+			    
+			   
+			    
  				
-				
+			     
+			 
+				if (date.equals(Order_Date)) {
+					System.out.println("Test Case ID: \t\t" + text_case_id + i++);
+					System.out.println("Product ID: \t\t" + ID);
+					System.out.println("Title Expected: \t" + date);
+					System.out.println("Title Actual: \t\t" + Order_Date);
+					System.out.println("Test Case Result: \t" + "PASSED" + "\n\n");
+				} else {
+					System.out.println("Test Case ID: \t\t" + text_case_id + i++);
+					System.out.println("Product ID: \t\t" + ID);
+					System.out.println("Title Expected: \t" + date);
+					System.out.println("Title Actual: \t\t" + Order_Date);
+					System.out.println("Test Case Result: \t" + "FAILED"+ "\n\n");
+				}
  
 			}
 

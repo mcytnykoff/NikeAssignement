@@ -14,7 +14,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-public class DataGeneratorForShoeWareHouse {
+public class DataGeneratorForShoeWareHouse extends RecentPurchases{
 	RecentPurchases rp = new RecentPurchases();
 	 
 	String filePath = rp.FilePath;
