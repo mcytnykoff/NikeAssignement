@@ -4,7 +4,7 @@
 
   <groupId>Nike</groupId>
   <artifactId>Assignement</artifactId>
-  <version>November_01_2015</version>
+  <version>01November2015</version>
   <packaging>jar</packaging>
 
   <name>Assignement</name>
@@ -79,9 +79,8 @@
 		<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.4</version>
+        <version>2.6</version>
 				<configuration>
 					<archive>
 						<manifest>
